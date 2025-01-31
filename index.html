@@ -1,0 +1,41 @@
+<!DOCTYPE html:5>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width= device-width, initial-scale = 1.0" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header><h1>Meus contatos</h1></header>
+    <main>
+      <form action="#" id="form">
+        <div class="conteiner">
+          <div class="nome">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required />
+          </div>
+          <div class="tel">
+            <label for="tel">Tel:</label>
+            <input type="tel" name="tel" id="tel" required maxlength="11" />
+          </div>
+          <div class="submit">
+            <label for="">Add</label>
+            <button type="submit"><img src="./image/phone-old-symbolic.svg" alt="telefone antigo"></button>
+          </div>
+        </div>
+      </form>
+      <section>
+        <table>
+          <tbody>
+            <tr>
+              <td id="name"></td>
+              <td id="cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    
+    <script src="main.js"></script>
+  </body>
+</html>

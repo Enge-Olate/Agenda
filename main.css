@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1.2rem;
+}
+header{
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+header h1{
+    color: #9ddf9a;
+}
+main{
+    position: relative;
+    top: 250px;
+    left: 100px;
+    width: 450px;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: space-evenly;
+}
+.submit{
+    position: relative;
+    left: 10px;
+}
+input{
+    height: 20px;
+    background-color: #eaecea;
+    outline:none;
+    border-top: none;
+    border-left: none;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 2.5px;
+    background: none;
+       
+}
+.submit button{
+    width: 36.71px;
+    border-radius: 4px;
+    background: #9ddf9a;
+    height: 20px;
+    cursor: pointer;
+
+}
+.submit label{
+    color: #235a20;
+}
+
+section{
+    position:absolute;
+    top:0;
+    left: 450px;
+    width: 350px;
+}
+table{
+    width: 300px;
+}
+
+tbody td{
+    padding: 8px;
+}
