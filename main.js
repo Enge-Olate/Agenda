@@ -1,22 +1,44 @@
-const form = document.getElementById('form')
-const contatos = []
-let linhas = ''
-form.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    const nome = document.getElementById('nome')
-    const tel = document.getElementById('tel')
-    const bodyTable = document.querySelector('tbody')
-    contatos.push(nome.value, tel.value)
+const form = document.getElementById("form");
+const corpoTabela = document.querySelector("tbody");
+let linhas = "";
+let contador = 0;
 
-    let linha = `<tr>`
-    linha += `<td>${nome.value}</td>`
-    linha += `<td>${tel.value}</td>`
-    linhas += linha
-    bodyTable.innerHTML = linhas
-    bodyTable.style.textAlign='center'
-    bodyTable.style.backgroundColor='#9ddf9a'
-    bodyTable.style.color='#333'
+function criarTabela(nome, telefone) {
+  function cabecalho() {
+    const tHeader = document.querySelector("thead");
+    const trHeader = document.querySelector("tr");
+    const tdNome = document.createElement("th");
+    const tdTel = document.createElement("th");
+    tdNome.innerHTML = "Nome:";
+    tdTel.innerHTML = "Telefone:";
+    trHeader.appendChild(tdNome);
+    trHeader.appendChild(tdTel);
+    tHeader.style.textAlign = "left";
+    tHeader.style.color = "#235a20";
+    tHeader.style.letterSpacing = "2";
+  }
+  if (contador <= 1) {
+    cabecalho();
+  }
+  function corpo(nome, telefone) {
+    let linha = `<tr>`;
+    linha += `<td>${nome}</td>`;
+    linha += `<td>${telefone}</td>`;
+    linha += `</tr>`;
+    linhas += linha;
+    corpoTabela.innerHTML = linhas;
     
-    nome.value = ''
-    tel.value = ''
-})
+    
+  }
+  corpo(nome, telefone);
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  contador++;
+  const nome = document.getElementById("nome");
+  const tel = document.getElementById("tel");
+  criarTabela(nome.value, tel.value);
+  nome.value = "";
+  tel.value = "";
+});

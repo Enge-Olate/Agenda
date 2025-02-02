@@ -15,9 +15,9 @@ header{
     left: 0;
 }
 header h1{
-    color: #9ddf9a;
+    color: #409a3b;
 }
-main{
+main, section{
     position: relative;
     top: 250px;
     left: 100px;
@@ -42,6 +42,7 @@ input{
     border-bottom: 1px solid;
     border-radius: 2.5px;
     background: none;
+    color: #0e330c;
        
 }
 .submit button{
@@ -53,19 +54,20 @@ input{
 
 }
 .submit label{
-    color: #235a20;
+    color: #409a3b;
 }
 
 section{
-    position:absolute;
-    top:0;
-    left: 450px;
-    width: 350px;
+    position:relative;
+    top:20px;
+    left:0;
+    /* width: 400px; */
 }
 table{
-    width: 300px;
+    width: 400px;
 }
 
-tbody td{
+tbody, td{
     padding: 8px;
+    background-color: #86df86;
 }
